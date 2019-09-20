@@ -1,5 +1,6 @@
 import React from 'react'
 import { validateFormFields } from '../utils';
+import Selector from './Selector';
 
 class Form extends React.Component {
     constructor(props) {
@@ -60,7 +61,7 @@ class Form extends React.Component {
             APP NAME
           </label>
           <div className="App-input">
-            <input type="text" placeholder="Enter App Display Name" value={this.props.name} onChange={this.handleChangeName} />
+            <input id="app-name-input" type="text" placeholder="Enter App Display Name" value={this.props.name} onChange={this.handleChangeName} />
             </div>
           <label>
             APP ICON
@@ -72,33 +73,19 @@ class Form extends React.Component {
                   <input className="App-select-file-button" type="submit" placeholder="SELECT A FILE" value="SELECT A FILE" onChange={this.handleFileChange} />
                 </div>
               </div>
-                <input  className="App-selector" placeholder="Enter App Display Name" type="file" name="file" onChange={this.handleFileChange}/>
+                <input id="app-icon-input" className="App-selector" placeholder="Enter App Display Name" type="file" name="file" onChange={this.handleFileChange}/>
           </div>
           <label>
             ICON'S BACKGROUND COLOR
             </label>
             <div className="App-input">
-            <input type="text" placeholder="Pick a color" value={this.props.color} onChange={this.handleChangeColor} />
+            <input id="app-color-input" type="text" placeholder="Pick a color" value={this.props.color} onChange={this.handleChangeColor} />
             <span style={{backgroundColor: this.props.color ? '#' + this.props.color : '#191919', color: this.props.color.includes('FF') ? '#191919' : '#FFFFFF'}}>{this.props.color ? '#' + this.props.color : '#191919' }</span>
           </div>
-          <label>
-            CATEGORY
-            </label>
-            <div className="App-selector-container">
-              <div className="App-selector-content">
-                <div className="App-selector-content-children-text">{this.props.category || 'Select your category'}</div>
-                <div className="App-selector-content-children">
-                  <svg  xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><g fill="grey"><path d="M7.41 7.84L12 9.25l-6 6-6-6z"></path></g></svg>
-                </div>
-              </div>
-                <select className="App-selector" onChange={this.handleCategoryChange}>
-                    <option value="" disabled selected>Select your category</option>
-                    <option value="grapefruit">Grapefruit</option>
-                    <option value="lime">Lime</option>
-                    <option value="coconut">Coconut</option>
-                    <option value="mango">Mango</option>
-                </select>
-          </div>
+          <Selector
+            category={this.props.category}
+            onChange={this.handleCategoryChange}
+          />
         </form>
       );
     }

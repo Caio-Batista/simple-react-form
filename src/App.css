@@ -201,6 +201,7 @@ img {
   font-size: 40%;
   padding-top: 3%;
   padding-left: 3%;
+  width: fit-content;
 }
 
 .App-image-container {

@@ -6,7 +6,6 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-images-upload": "^1.2.7",
     "react-scripts": "3.1.1"
   },
   "scripts": {
@@ -15,7 +14,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "e2e": "./node_modules/.bin/cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^3.4.1",
     "gh-pages": "^2.1.1"
   }
 }
