@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mundi/static/css/main.3d61c0f9.chunk.css",
+    "main.js": "/mundi/static/js/main.13f32e5e.chunk.js",
+    "main.js.map": "/mundi/static/js/main.13f32e5e.chunk.js.map",
+    "runtime~main.js": "/mundi/static/js/runtime~main.88eef853.js",
+    "runtime~main.js.map": "/mundi/static/js/runtime~main.88eef853.js.map",
+    "static/js/2.8de05c7c.chunk.js": "/mundi/static/js/2.8de05c7c.chunk.js",
+    "static/js/2.8de05c7c.chunk.js.map": "/mundi/static/js/2.8de05c7c.chunk.js.map",
+    "index.html": "/mundi/index.html",
+    "precache-manifest.8d1e3c4ccb3da287efadde4f43e1bcfa.js": "/mundi/precache-manifest.8d1e3c4ccb3da287efadde4f43e1bcfa.js",
+    "service-worker.js": "/mundi/service-worker.js",
+    "static/css/main.3d61c0f9.chunk.css.map": "/mundi/static/css/main.3d61c0f9.chunk.css.map"
+  }
+}
