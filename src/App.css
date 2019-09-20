@@ -167,7 +167,9 @@ img {
   display: inline-block;
   background-color: grey;
   color: #E1E1E1;
-  margin: 5%;
+  padding: 10%;
+  margin: 0;
+  padding-right: 13px;
 }
 
 
@@ -197,6 +199,7 @@ img {
 .App-selector-content-children {
   display: inline-block;
   height: 100%;
+  margin: 3px;
 }
 
 .App-selector-content-children-text {
