@@ -80,7 +80,7 @@ class Form extends React.Component {
             </label>
             <div className="App-input">
             <input id="app-color-input" type="text" placeholder="Pick a color" value={this.props.color} onChange={this.handleChangeColor} />
-            <span style={{backgroundColor: this.props.color ? '#' + this.props.color : '#191919', color: this.props.color.includes('FF') ? '#191919' : '#FFFFFF'}}>{this.props.color ? '#' + this.props.color : '#191919' }</span>
+            <span className="App-color-span" style={{backgroundColor: this.props.color ? '#' + this.props.color : '#191919', color: this.props.color.includes('FF') ? '#191919' : '#FFFFFF'}}>{this.props.color ? '#' + this.props.color : '#191919' }</span>
           </div>
           <Selector
             category={this.props.category}

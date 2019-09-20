@@ -39,6 +39,14 @@ img {
   overflow: auto;
 }
 
+.App-color-span {
+  align-items: center;
+   display: flex;
+   padding: 15px;
+   font-size: small;
+
+}
+
 .App-main-title {
   display: flex;
   margin-bottom: 10%;
@@ -157,9 +165,9 @@ img {
 
 .App-select-file-button {
   display: inline-block;
-  margin-top: 10%;
   background-color: grey;
   color: #E1E1E1;
+  margin: 5%;
 }
 
 
@@ -188,20 +196,19 @@ img {
 
 .App-selector-content-children {
   display: inline-block;
-  vertical-align: middle;
   height: 100%;
-  align-items: center;
 }
 
 .App-selector-content-children-text {
-  /* display: inline-block;
   /* vertical-align: middle; */
   /* height: 100%;
   align-items: center;  */
-  font-size: 40%;
-  padding-top: 3%;
-  padding-left: 3%;
+  display: flex;
   width: fit-content;
+  align-items: center;
+  font-size: 40%;
+  padding-left: 3%;
+  color: gray;
 }
 
 .App-image-container {
