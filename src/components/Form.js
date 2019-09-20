@@ -1,6 +1,9 @@
 import React from 'react'
 import { validateFormFields } from '../utils';
 import Selector from './Selector';
+import BackgroundInput from './BackgroundInput';
+import ImageInput from './ImageInput';
+import NameInput from './NameInput';
 
 class Form extends React.Component {
     constructor(props) {
@@ -25,7 +28,7 @@ class Form extends React.Component {
     }
 
     handleFileChange(event) {
-      const url = URL.createObjectURL(event.target.files[0])
+      const url = event.target.files && URL.createObjectURL(event.target.files[0])
       this.props.onChangeFile(url)
       this.setState({ image: event.target.value });
     }
@@ -57,31 +60,18 @@ class Form extends React.Component {
           <label className="App-main-title">
             Create Your App
           </label>
-          <label>
-            APP NAME
-          </label>
-          <div className="App-input">
-            <input id="app-name-input" type="text" placeholder="Enter App Display Name" value={this.props.name} onChange={this.handleChangeName} />
-            </div>
-          <label>
-            APP ICON
-            </label>
-            <div className="App-selector-container">
-              <div className="App-selector-content">
-                <div className="App-selector-content-children-text">{ image ? image.substr(image.length - 10) : 'Drag an image here to upload'}</div>
-                <div className="App-selector-content-children">
-                  <input className="App-select-file-button" type="submit" placeholder="SELECT A FILE" value="SELECT A FILE" onChange={this.handleFileChange} />
-                </div>
-              </div>
-                <input id="app-icon-input" className="App-selector" placeholder="Enter App Display Name" type="file" name="file" onChange={this.handleFileChange}/>
-          </div>
-          <label>
-            ICON'S BACKGROUND COLOR
-            </label>
-            <div className="App-input">
-            <input id="app-color-input" type="text" placeholder="Pick a color" value={this.props.color} onChange={this.handleChangeColor} />
-            <span className="App-color-span" style={{backgroundColor: this.props.color ? '#' + this.props.color : '#191919', color: this.props.color.includes('FF') ? '#191919' : '#FFFFFF'}}>{this.props.color ? '#' + this.props.color : '#191919' }</span>
-          </div>
+          <NameInput
+            name={this.props.name}
+            onChange={this.handleChangeName}
+          />
+          <ImageInput
+            image={image}
+            onChange={this.handleFileChange}
+          />
+          <BackgroundInput
+            color={this.props.color}
+            onChange={this.handleChangeColor}
+          />
           <Selector
             category={this.props.category}
             onChange={this.handleCategoryChange}

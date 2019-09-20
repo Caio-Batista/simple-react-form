@@ -35,6 +35,10 @@ class App extends React.Component {
     const isFormValid = validateFormFields(this.state)
     if (isFormValid) {
       alert('App criada com sucesso: ' + this.state.name);
+      console.log(`{"name": "${this.state.name}",
+       "color": "${this.state.bgcolor}",
+       "category": "${this.state.category}",
+       "file": "${this.state.file}"}`)
     }
     else{
       alert('Todos os campos precisam ser preenchidos');

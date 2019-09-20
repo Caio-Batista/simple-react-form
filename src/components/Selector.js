@@ -1,15 +1,6 @@
 import React from 'react'
 
 class Selector extends React.Component {
-    constructor(props) {
-      super(props);
-
-      this.handleCategoryChange = this.handleCategoryChange.bind(this);
-    }
-
-    handleCategoryChange(event) {
-      this.props.onChange(event.target.value)
-    }
 
     render() {
       return (
